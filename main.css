@@ -1,7 +1,11 @@
+/*navbar name logo fonts */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CZ:wght@100..400&display=swap');
+
 body{
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
+  /* background-color: #5c0af3; */
 } 
 .navbar-custom {
     background-color: blue;
@@ -20,13 +24,11 @@ body{
   font-style: normal;
   font-size: 35px;
 }
-/* .nav-item:last-child {
-  width: 300px;
-  text-align: center;
-} */
-/* .nav-item:last-child a {
-  width: 200px;
-} */
+.navbar-brand samp{
+  font-family: "Playwrite CZ", cursive;
+  font-weight: 800;
+
+}
 
 .navbar-nav .nav-item .nav-link {
   position: relative;
@@ -111,6 +113,8 @@ body{
     outline: 2px solid rgb(0, 189, 225);
     outline-offset: 10px;
     box-shadow: 0 0 100px 40px #00ffff;
+    /* filter: drop-shadow(1px 1px 20px red); */
+    
   }
 
   .hero img:hover {
@@ -132,138 +136,84 @@ body{
     background-color: #0056b3; /* Hover background color */
     color: white; /* Hover text color */
   }
-/* #img-ani {
-  border: 7px solid;
-  margin: auto;
-  border-radius: 50%;
-  border-color: red;
-  max-width: 55%;
-  height: auto;
-  /* animation: rotate 1.5s linear infinite; */
 
-/* } */
-/* @keyframes rotate{
-  to {transform: rotate(365deg);}
-} */ */
-
-/* @media (max-width: 768px) {
-.hero .col-7, .hero .col-5 {
-      text-align: center;
-    }
-.hero img {
-      width: 80%;
-      margin: 20px 0;
-    }
-  }
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  } */
-
-
-.portfolio-item {
-    margin-bottom: 30px;
-  }
-
-
-  /* ****************  skil section  ****************** */
-
-/* #skil-con {
+/* ************** Skills Section  ***************** */
+.skil-container {
+  display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  border: 1px solid;
-  display: flex;
-}
-#skil-wra {
-  max-width: 1100px;
-  width: 100%;
+  height: 400px;
+  background-color: rgb(7, 6, 17);
+  padding-left: 10%;
+  padding-right: 10%;
   position: relative;
 }
-#skil-wra i {
-  height: 50px;
-  width: 50px;
-  background: #e5e7d3;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
-}
-#skil-wra i:first-child {
-  left: -22px;
-}
-#skil-wra i:last-child {
-  right: -22px;
-}
-#skil-car {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: 0;
-  }
-#skil-car::-webkit-scrollbar {
-  display: none;
-}
-#skil-car :where(.card, .img) {
+.card-list .card-item {
+  color: #fff;
+  width: 400px;
+  height: 300px;
+  padding: 35px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-#skil-car.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-}
-#skil-car.dragging .card {
-  cursor: grab;
-  user-select: none;
-
+  border-radius: 8px;
+  backdrop-filter: blur(30px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-#skil-cord {
-  scroll-snap-align: start;
-    list-style: none;
-    background-color: #fff;
-    border-radius: 8px;
-    height: 342px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 15px;
-    cursor: pointer;
-  }  */
-#skil-cord .img {
-  background: #8853FF;
-  width: 148px;
-  height: 148px;
+.card-list .card-item .user-image {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #fff;
+  padding: 4px;
 }
 
-#skil-cord .img img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #fff;
-  }
-#skil-cord h2 {
-  font-weight: 300;
-  font-size: 1.56rem;
-  margin: 30px 0 5px;
+.card-list .card-item .user-profession {
+  font-size: 1.15rem;
+  color: #e3e3e3;
+  font-weight: 500;
+  margin: 7px 0 10px;
 }
 
-#skil-cord span {
-  color: #6a6d78;
-  font-size: 1.31rem;
+.card-list .card-item  .message-button {
+  font-size: 1.10rem;
+  padding: 5px 20px;
+  color: #030728;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
 }
+
+.card-list .card-item  .message-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.mySwiper .swiper-pagination-bullet {
+  background: #fff;
+  height: 15px;
+  width: 15px;
+  
+}
+
+.mySwiper .swiper-slide-button {
+  color: #fff;
+  transition: 0.2s ease;
+  position: absolute;
+ 
+}
+.mySwiper .swiper-slide-button:hover {
+  color: #4658ff;
+}
+
 /* @media screen and (max-width: 900px) {
   #skil-car {
     grid-auto-columns: calc((100% / 2) - 12px);
@@ -284,3 +234,11 @@ body{
     padding: 10px 0;
     text-align: center;
   }
+
+  /* ********************** media queries ************************ */
+@media only screen and (max-width: 600px){
+  .hero img{
+    margin-top: 40px;
+  }
+  
+}
