@@ -84,13 +84,15 @@ body{
   }
 .hero #web-ani {
   padding-right: 0px;
+  
   border-right: 3px solid orangered;
   margin: auto;
-  width: 0;
+  width: 0px;
   white-space: nowrap;
   overflow: hidden;
   animation: typing steps(20,end)forwards infinite 9s;
 }
+
 @keyframes typing {
   0%{
     width: 0%;
@@ -99,6 +101,7 @@ body{
     width: 50%;
   }
 }
+
 .hero p {
     font-size: 1.2rem;
     color: #6c757d; /* Secondary text color */
@@ -146,8 +149,17 @@ body{
   background-color: rgb(7, 6, 17);
   padding-left: 10%;
   padding-right: 10%;
-  position: relative;
+ position: relative;
 }
+.skil-container #skil-h2{
+  text-align: center;
+  color: #ec48df;
+  position: absolute;
+  top: 10px;
+  border-bottom: 3px solid white;
+  width: 100px;
+}
+
 .card-list .card-item {
   color: #fff;
   width: 400px;
@@ -201,13 +213,12 @@ body{
   background: #fff;
   height: 15px;
   width: 15px;
-  
 }
 
 .mySwiper .swiper-slide-button {
   color: #fff;
   transition: 0.2s ease;
-  position: absolute;
+
  
 }
 .mySwiper .swiper-slide-button:hover {
@@ -237,6 +248,13 @@ body{
 
   /* ********************** media queries ************************ */
 @media only screen and (max-width: 600px){
+  .hero img{
+    margin-top: 40px;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
   .hero img{
     margin-top: 40px;
   }

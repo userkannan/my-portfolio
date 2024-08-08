@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
+  <!-- ============== linking icons logo ================= -->
+  <link rel="icon" href="img/logo2.jpeg">
+  <!-- ========== linkink bootstrap link ========= -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!--======== fontawesome link for icons =========-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -21,6 +24,7 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
 
@@ -46,7 +50,7 @@
           <a class="nav-link" href="#contact">Education</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Skils</a>
+          <a class="nav-link" href="#skil-container">Skils</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
@@ -89,7 +93,7 @@
       <div class="col-12 col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-duration="500">
           <img src="img/logo1.jpeg" class="img-fluid rounded-circle" alt="Profile Image">
       </div>
-      <div class="col-12 col-md-8" data-aos="fade-up" data-aos-duration="1500">
+      <div class="col-12 col-md-8" data-aos="fade-up" data-aos-duration="1000">
           <h2>About Me</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae velit at leo facilisis hendrerit. Integer nec quam vehicula, accumsan metus at, suscipit massa. Sed eu nisi eget nulla sollicitudin molestie. Donec vel ex nec libero ultrices volutpat. Praesent in nisi id lacus faucibus facilisis. Maecenas vel ligula nec velit sollicitudin congue. Nulla et metus et felis feugiat ullamcorper.</p>
           <p>Donec accumsan nulla nec eros volutpat, sit amet varius elit aliquam. Nulla facilisi. Vivamus quis fermentum erat. Sed sollicitudin libero a arcu fermentum, eget tristique lacus scelerisque. Vestibulum venenatis sem ut lacus fringilla, a placerat nisi vehicula. Integer ac dui at tortor vehicula faucibus a in nunc.</p>
@@ -98,7 +102,8 @@
 </div>
 
 <!-- ============ skils  section ============ -->
-<div class="container-fluid skil-container"> 
+<div class="container-fluid skil-container" id="skil-container">
+  <h2 id="skil-h2">Skils</h2> 
   <div class="swiper mySwiper">
         <div class="card-list swiper-wrapper">
 
@@ -164,8 +169,6 @@
                 <p class="user-profession">Software Developer</p>
                 <button class="message-button">Message</button>
             </div>
-
-        <!-- </div> -->
     </div>
     <div class="swiper-slide-button swiper-button-next"></div>
     <div class="swiper-slide-button swiper-button-prev"></div>
@@ -173,9 +176,50 @@
 </div>
 </div>
 
+<!-- ========== Project Section =========== -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4">My Projects</h2>
+  <div class="row">
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card" data-aos="fade-right" data-aos-duration="500">
+              <img src="project1.jpg" class="card-img-top" alt="Project 1">
+              <div class="card-body">
+                  <h5 class="card-title">Project Title 1</h5>
+                  <p class="card-text">A brief description of the project goes here. Explain what the project is about and any key features or technologies used.</p>
+                  <a href="#" class="btn btn-primary">View Project</a>
+              </div>
+          </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card" data-aos="fade-up" data-aos-duration="500">
+              <img src="project2.jpg" class="card-img-top" alt="Project 2">
+              <div class="card-body">
+                  <h5 class="card-title">Project Title 2</h5>
+                  <p class="card-text">A brief description of the project goes here. Explain what the project is about and any key features or technologies used.</p>
+                  <a href="#" class="btn btn-primary">View Project</a>
+              </div>
+          </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card" data-aos="fade-left" data-aos-duration="500">
+              <img src="project3.jpg" class="card-img-top" alt="Project 3">
+              <div class="card-body">
+                  <h5 class="card-title">Project Title 3</h5>
+                  <p class="card-text">A brief description of the project goes here. Explain what the project is about and any key features or technologies used.</p>
+                  <a href="#" class="btn btn-primary">View Project</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
 
-  <!-- Contact Section -->
-  <div class="container my-5 bg-light" id="contact">
+
+
+  <!-- ========= Contact Section =========== -->
+  <div class="container-fluid my-5 bg-light" id="contact">
     <h2 class="text-center mb-4">Contact Me</h2>
     <form>
       <div class="form-row">
@@ -212,9 +256,11 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<!-- Aos scroll animesion  -->
+
 <script>
+//###### Aos scroll animesion  #######
     AOS.init();
+//########## skils swiper js ############## 
     var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
