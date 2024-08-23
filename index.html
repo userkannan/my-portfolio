@@ -71,7 +71,7 @@
         <div class="col-lg-7 col-md-12">
           <h1>Welcome to My Portfolio</h1>
           <h1>I'm <samp style="color: rgb(253, 2, 2);">KAN</samp>NAN</h1>
-          <h4 style="color: blue;" id="web-ani">WEB DEVELOPER</h4>
+          <span class=" fw-bold auto-type"></span>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur quis saepe earum ad, voluptates aperiam quae. Quam, consectetur veniam minima, quia quibusdam dicta ea velit, inventore laborum dolore ullam blanditiis. 
              Discover my work and projects</p>
              <button class="btn btn-custom" onclick="myfun()"><a href="#" style="color: inherit; text-decoration: none;">GitHub</a></button>
@@ -256,8 +256,18 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+  <!-- Include the Typed.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Programmer", "Frontend Developer", "Web Developer", "Full Stack Developer"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        });
+    </script>
 <script>
+
 //###### Aos scroll animesion  #######
     AOS.init();
 //########## skils swiper js ############## 
