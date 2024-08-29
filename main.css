@@ -1,12 +1,14 @@
 /*navbar name logo fonts */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+CZ:wght@100..400&display=swap');
-
-body{
+body {
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   /* background-color: #5c0af3; */
 } 
+
+/************** Navbar ******************/
+/* Default hamburger icon */
 .navbar-custom {
     background-color: blue;
   }
@@ -71,24 +73,30 @@ body{
 .hero {
     /* background: url('https://via.placeholder.com/1200x600') no-repeat center center; */
     background-size: cover;
-    height: 100vh;
     color: rgb(15, 15, 15);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    /* margin-top: 00px; */
   }
 .hero h1 {
     font-size: 2.5rem;
     font-weight: bold;
   }
+/* typed auto animet */
+.auto-type {
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: blue;
+  }
 
-.auto-type{
-  letter-spacing: 3px;
-  font-weight: 800;
-  font-size: 1.8rem;
-  color: blue;
+.typed-cursor {
+  color: rgb(253, 2, 2);
+  font-size: 25px;
 }
+
 
 .hero p {
     font-size: 1.2rem;
@@ -104,7 +112,7 @@ body{
     outline: 2px solid rgb(0, 189, 225);
     outline-offset: 10px;
     box-shadow: 0 0 100px 40px #00ffff;
-    /* filter: drop-shadow(1px 1px 20px red); */
+    /* filter: drop-shadow(5px 10px 8px red); */
     
   }
 
@@ -206,8 +214,11 @@ body{
 .mySwiper .swiper-slide-button {
   color: #fff;
   transition: 0.2s ease;
-
- 
+  border: 1px solid ;
+  border-radius: 50%;
+  width: 50px;
+  height: 60px;
+  background-color: rgb(205, 198, 227);
 }
 .mySwiper .swiper-slide-button:hover {
   color: #4658ff;
@@ -236,6 +247,8 @@ body{
 
   /* ********************** media queries ************************ */
 @media only screen and (max-width: 600px){
+
+
   .hero img{
     margin-top: 40px;
   }
@@ -243,8 +256,16 @@ body{
 }
 
 @media only screen and (max-width: 768px) {
+ 
   .hero img{
-    margin-top: 40px;
+    margin-top: 50px;
+  
   }
   
 }
+@media only screen and (min-width: 124px) {
+  .hero {
+    height: 90vh;
+  }
+}
+

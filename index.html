@@ -29,7 +29,7 @@
 <body>
 
 <!--======= Navigation Bar =====-->
- <nav class="navbar sticky-top navbar-expand-lg" style="background-color: black">
+ <!-- <nav class="navbar sticky-top navbar-expand-lg" style="background-color: black">
     <a class="navbar-brand text-light" href="index.html" style="margin-left: 40px;"><samp>K</samp>annan</a>
     <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -62,24 +62,57 @@
         </li>
       </ul>
     </div>
-  </nav>
+  </nav> -->
+  <nav class="navbar sticky-top navbar-expand-lg" style="background-color: black">
+    <a class="navbar-brand text-light" href="index.html" style="margin-left: 40px;"><samp>K</samp>annan</a>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Education</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#skil-container">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-primary resume md-px-5 mx-5 mt-1" href="img/0_pugazh resume.pdf" tabindex="-1" role="button" style="margin-top: 10px;" title="Download file" download>Get Resume
+                    <i class="bi bi-download"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
   <!-- Hero Section -->
   <div class="hero">
     <div class="container">
       <div class="row">
-        <div class="col-lg-7 col-md-12">
+        <div class="col-lg-7 col-md-6 col-sm-12">
           <h1>Welcome to My Portfolio</h1>
           <h1>I'm <samp style="color: rgb(253, 2, 2);">KAN</samp>NAN</h1>
-          <span class=" fw-bold auto-type"></span>
+          <span class="fw-bold auto-type"></span>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur quis saepe earum ad, voluptates aperiam quae. Quam, consectetur veniam minima, quia quibusdam dicta ea velit, inventore laborum dolore ullam blanditiis. 
              Discover my work and projects</p>
              <button class="btn btn-custom" onclick="myfun()"><a href="#" style="color: inherit; text-decoration: none;">GitHub</a></button>
              <button class="btn btn-custom"><a href="#" style="color: inherit; text-decoration: none;">LinkedIn</a></button>
-        </div>
-        <div class="col-lg-5 col-md-12">
+          </div>
+        <div class="col-lg-5 col-md-6 col-sm-12">
           <!-- <div class="col-6 d-flex align-items-center" id="img-ani"> -->
-            <img src="img/my imge 2.crdownload" alt="my profile">
+            <img src="img/my imge 2.crdownload" alt="my profile"> 
           <!-- </div> -->
         </div>
       </div>
@@ -256,6 +289,24 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Navbar -->
+  <script>
+    $(document).ready(function () {
+        $('.navbar-nav>li>a').on('click', function () {
+            $('.navbar-collapse').collapse('hide');
+            toggleIcon();
+        });
+
+        // Toggle navbar icon between hamburger and cancel (X)
+        $('.navbar-toggler').on('click', function () {
+            toggleIcon();
+        });
+
+        function toggleIcon() {
+            $('.navbar-toggler-icon').toggleClass('cancel-icon');
+        }
+    });
+</script>
   <!-- Include the Typed.js library -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
