@@ -29,41 +29,7 @@
 <body>
 
 <!--======= Navigation Bar =====-->
- <!-- <nav class="navbar sticky-top navbar-expand-lg" style="background-color: black">
-    <a class="navbar-brand text-light" href="index.html" style="margin-left: 40px;"><samp>K</samp>annan</a>
-    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav" >
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html" >Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#portfolio">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skil-container">Skils</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-        <li class="nav-item" >
-          <a class="btn btn-primary resume md-px-5 mx-5 mt-1" href="img/0_pugazh resume.pdf" tabindex="-1" role="button" style="margin-top: 10px;" title="Download file" download>Get Resume
-            <i class="bi bi-download"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav> -->
-  <nav class="navbar sticky-top navbar-expand-lg" style="background-color: black">
+  <nav class="navbar sticky-top  navbar-expand-lg" style="background-color: black">
     <a class="navbar-brand text-light" href="index.html" style="margin-left: 40px;"><samp>K</samp>annan</a>
     <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -123,7 +89,7 @@
 
 <div class="container py-5">
   <div class="row align-items-center">
-      <div class="col-12 col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-duration="500">
+      <div class="col-12 col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-duration="500" id="about-img">
           <img src="img/logo1.jpeg" class="img-fluid rounded-circle" alt="Profile Image">
       </div>
       <div class="col-12 col-md-8" data-aos="fade-up" data-aos-duration="1000">
@@ -252,27 +218,53 @@
 
 
   <!-- ========= Contact Section =========== -->
-  <div class="container-fluid my-5 bg-light" id="contact">
+  <!-- <div class="container-fluid my-5 bg-light" id="contact">
     <h2 class="text-center mb-4">Contact Me</h2>
-    <form>
+    <form onsubmit="sendEmail(); reset(); return false;">  
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputName">Name</label>
-          <input type="text" class="form-control" id="inputName" placeholder="Your Name">
+          <input type="text" class="form-control" id="Name" placeholder="Your Name">
         </div>
         <div class="form-group col-md-6">
           <label for="inputEmail">Email</label>
-          <input type="email" class="form-control" id="inputEmail" placeholder="Your Email">
+          <input type="email" class="form-control" id="Email" placeholder="Your Email">
         </div>
       </div>
       <div class="form-group">
         <label for="inputMessage">Message</label>
-        <textarea class="form-control" id="inputMessage" rows="4" placeholder="Your Message"></textarea>
+        <textarea class="form-control" id="Message" rows="4" placeholder="Your Message"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Send Message</button>
     </form>
+  </div> -->
+  <div class="container-fluid my-5 bg-light" id="contact">
+    <h2 class="text-center mb-4">Contact Me</h2>
+    <form>  
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputName">Name</label>
+          <input type="text" class="form-control" id="Name" placeholder="Your Name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail">Email</label>
+          <input type="email" class="form-control" id="Email" placeholder="Your Email">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputPhone">Phone Number</label>
+          <input type="tel" class="form-control" id="Phone" placeholder="Your Phone Number">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputMessage">Message</label>
+          <textarea class="form-control" id="Message" rows="4" placeholder="Your Message"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" onclick="sendEmail()">Send Message</button>
+    </form>
   </div>
-
+  
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -317,8 +309,20 @@
             loop: true
         });
     </script>
-<script>
+<!-- ====== sent email Emailjs Api ===== -->
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+publicKey: "GEw4zjAKOZPbEErrK",
+});
+})();
+</script>
 
+<!-- ===== scroll and swiper  ==== -->
+<script>
 //###### Aos scroll animesion  #######
     AOS.init();
 //########## skils swiper js ############## 
