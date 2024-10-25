@@ -243,7 +243,10 @@ body {
 
   /* ********************** media queries ************************ */
 @media only screen and (max-width: 600px){
-
+  .hero {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
 
   .hero img{
     margin-top: 40px;
@@ -253,11 +256,6 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .hero {
-    margin-top: 110px;
-    margin-bottom: 10px;
-  }
- 
   .hero img{
     margin-top: 50px;
   
