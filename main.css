@@ -110,9 +110,9 @@ body {
     background-color: black;
     border-radius: 50%;
     margin: auto;
-    outline: 2px solid rgb(0, 189, 225);
-    outline-offset: 10px;
-    box-shadow: 0 0 100px 40px #00ffff;
+    outline: 10px solid rgb(27, 202, 229);
+    /* outline-offset: 0px; */
+    box-shadow: 0 0 200px 10px #2B00FF;
     /* filter: drop-shadow(5px 10px 8px red); */
     
   }
@@ -139,9 +139,35 @@ body {
 
 /* ************** about  ***************** */
 #about {
-  /* background: url(./img/bg\ img2.jpg) no-repeat center center; */
-  background-color: white;
+  /* background: url(./img/bg\ 3.jpg) no-repeat center center; */
+  background: linear-gradient(rgb(0, 1, 5),black);
+  border-top: 1px solid white;
 }
+#about #about-img {
+  /* border: 1px solid red; */
+  height: 400px;
+  position: relative;
+}
+#about .card{
+  background-color: #C4C4C4;
+  height: 250px;
+  width: 230px;
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+}
+#about .card2{
+  height: 250px;
+  width: 230px;
+  position: absolute;
+  top: 50px;
+  left: 70px;
+}
+#about p {
+  font-size: large;
+  color: white;
+}
+
 
 
 /* ************** Skills Section  ***************** */
@@ -150,7 +176,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 400px;
-  background-color: rgb(7, 6, 17);
+  background-color: black;
   padding-left: 10%;
   padding-right: 10%;
  position: relative;
@@ -228,16 +254,62 @@ body {
   color: #4658ff;
 }
 
-/* @media screen and (max-width: 900px) {
-  #skil-car {
-    grid-auto-columns: calc((100% / 2) - 12px);
+  /* ************** skils2 **************** */
+
+
+  .skills-container {
+    padding: 20px;
   }
-}
-@media screen and (max-width: 600px) {
-  #skil-car {
-    grid-auto-columns: 100%;
+  .skills-container p {
+    color: white;
+    text-align: center;
+    justify-content: center;
   }
-} */
+  .skills-container h2 {
+    justify-content: center;
+    margin: auto;
+    color: white;
+    height: auto;
+    width: fit-content;
+    background-color: #1BEF57;
+    border-radius: 15px;
+  }
+  
+  .skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill img {
+    width: 70%;
+    max-width: 80px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill h4 {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+  }
+  
+  .skill:hover {
+    transform: translateY(-10px); /* Lift effect */
+  }
+  
+  .skill:hover img {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Box-shadow effect */
+  }
+  
+  
+
 
 
 
@@ -249,6 +321,7 @@ body {
     text-align: center;
   }
 
+
   /* ********************** media queries ************************ */
   @media only screen and (max-width: 600px){
     .hero {
@@ -259,8 +332,13 @@ body {
     .hero img{
       margin-top: 40px;
     }
+    .skill img {
+      width: 40%; /* Even smaller icons on very small screens */
+    }
   
-    
+    .skill h4 {
+      font-size: 14px; /* Adjust the font size of the title on small screens */
+    }
   }
   
   @media only screen and (max-width: 768px) {
@@ -271,6 +349,14 @@ body {
   
     #about-img{
       margin-top: 80px;
+    }
+
+    .skill img {
+      width: 50%; /* Smaller icons on medium devices */
+    }
+  
+    .col-4 {
+      flex: 0 0 33.33%; /* 3 items per row on small devices (mobile and tablet) */
     }
     
   }
