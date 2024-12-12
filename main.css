@@ -1,35 +1,34 @@
 /*navbar name logo fonts */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+CZ:wght@100..400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CZ:wght@100..400&display=swap");
 body {
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   background-color: black;
-} 
+}
 
 /************** Navbar ******************/
 /* Default hamburger icon */
 .navbar-custom {
-    background-color: blue;
-  }
-  .navbar-nav .nav-link {
-    color: white;
-    margin-left: 30px;
-  }
-  .navbar-nav .nav-link:hover {
-    color: rgb(55, 0, 255);
-    transition: 0.3s; 
-  } 
-.navbar-brand{
+  background-color: blue;
+}
+.navbar-nav .nav-link {
+  color: white;
+  margin-left: 30px;
+}
+.navbar-nav .nav-link:hover {
+  color: rgb(55, 0, 255);
+  transition: 0.3s;
+}
+.navbar-brand {
   font-family: "Pacifico", cursive;
   font-weight: 500;
   font-style: normal;
   font-size: 35px;
 }
-.navbar-brand samp{
+.navbar-brand samp {
   font-family: "Playwrite CZ", cursive;
   font-weight: 800;
-
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -39,13 +38,13 @@ body {
 }
 
 .navbar-nav .nav-item .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   height: 2px;
   width: 0;
-  background-color: #007bff; 
+  background-color: #007bff;
   transition: width 0.3s ease;
 }
 
@@ -72,75 +71,70 @@ body {
 
 /******************* hero section ***********************/
 .hero {
-    background: url('./img/bg\ img.jpg') no-repeat center center;
-    background-size: cover;
-    color: rgb(15, 15, 15);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+  background: url("./img/bg\ img.jpg") no-repeat center center;
+  background-size: cover;
+  color: rgb(15, 15, 15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .hero h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
-  }
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
 /* typed auto animet */
 .auto-type {
-    letter-spacing: 3px;
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: blue;
-  }
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: blue;
+}
 
 .typed-cursor {
   color: rgb(253, 2, 2);
   font-size: 25px;
 }
 
-
 .hero p {
-    font-size: 1.2rem;
-    color: #6c757d; /* Secondary text color */
-  }
+  font-size: 1.2rem;
+  color: #6c757d; /* Secondary text color */
+}
 
 .hero img {
-    max-width: 50%;
-    height: auto;
-    background-color: black;
-    border-radius: 50%;
-    margin: auto;
-    outline: 10px solid rgb(27, 202, 229);
-    /* outline-offset: 0px; */
-    box-shadow: 0 0 200px 10px #2B00FF;
-    /* filter: drop-shadow(5px 10px 8px red); */
-    
-  }
+  max-width: 50%;
+  height: auto;
+  background-color: black;
+  border-radius: 50%;
+  margin: auto;
+  outline: 10px solid rgb(27, 202, 229);
+  box-shadow: 0 0 160px 0 #2b00ff;
+}
 
-  /* .hero img:hover {
+/* .hero img:hover {
     outline: 2px solid rgb(236, 34, 209);
     outline-offset: 10px;
     box-shadow: 0 0 100px 40px #ec48df;
   } */
 
-
 .hero button {
-    margin: 5px;
-  }
+  margin: 5px;
+}
 .hero .btn-custom {
-    background-color: #007bff; /* Button background color */
-    color: white; /* Button text color */
-    border: none;
-  }
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+}
 .hero .btn-custom:hover {
-    background-color: #0056b3; /* Hover background color */
-    color: white; /* Hover text color */
-  }
+  background-color: #0056b3; /* Hover background color */
+  color: white; /* Hover text color */
+}
 
 /* ************** about  ***************** */
 #about {
   /* background: url(./img/bg\ 3.jpg) no-repeat center center; */
-  background: linear-gradient(rgb(0, 1, 5),black);
+  background: linear-gradient(rgb(0, 1, 5), black);
   border-top: 1px solid white;
 }
 #about #about-img {
@@ -148,15 +142,15 @@ body {
   height: 400px;
   position: relative;
 }
-#about .card{
-  background-color: #C4C4C4;
+#about .card {
+  background-color: #c4c4c4;
   height: 250px;
   width: 230px;
   position: absolute;
   bottom: 50px;
   left: 30px;
 }
-#about .card2{
+#about .card2 {
   height: 250px;
   width: 230px;
   position: absolute;
@@ -168,8 +162,6 @@ body {
   color: white;
 }
 
-
-
 /* ************** Skills Section  ***************** */
 .skil-container {
   display: flex;
@@ -179,9 +171,9 @@ body {
   background-color: black;
   padding-left: 10%;
   padding-right: 10%;
- position: relative;
+  position: relative;
 }
-.skil-container #skil-h2{
+.skil-container #skil-h2 {
   text-align: center;
   color: #ec48df;
   position: absolute;
@@ -221,8 +213,8 @@ body {
   margin: 7px 0 10px;
 }
 
-.card-list .card-item  .message-button {
-  font-size: 1.10rem;
+.card-list .card-item .message-button {
+  font-size: 1.1rem;
   padding: 5px 20px;
   color: #030728;
   border-radius: 6px;
@@ -233,7 +225,7 @@ body {
   transition: 0.2s ease;
 }
 
-.card-list .card-item  .message-button:hover {
+.card-list .card-item .message-button:hover {
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #fff;
   color: #fff;
@@ -248,94 +240,119 @@ body {
 .mySwiper .swiper-slide-button {
   color: #fff;
   transition: 0.2s ease;
-
 }
 .mySwiper .swiper-slide-button:hover {
   color: #4658ff;
 }
 
-  /* ************** skils2 **************** */
+/* ************** skils2 **************** */
 
-
-  .skills-container {
-    padding: 20px;
-  }
-  .skills-container p {
-    color: white;
-    text-align: center;
-    justify-content: center;
-  }
-  .skills-container h2 {
-    justify-content: center;
-    margin: auto;
-    color: white;
-    height: auto;
-    width: fit-content;
-    background-color: #1BEF57;
-    border-radius: 15px;
-  }
-  
-  .skill {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-  }
-  
-  .skill img {
-    width: 70%;
-    max-width: 80px;
-    height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .skill h4 {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    text-align: center;
-  }
-  
-  .skill:hover {
-    transform: translateY(-10px); /* Lift effect */
-  }
-  
-  .skill:hover img {
-    transform: scale(1.1); /* Slight zoom effect */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Box-shadow effect */
-  }
-  
-
-  /* *********************** Contact Form ******************************** */
-  
- #contact {
+.skills-container {
+  padding: 20px;
+}
+.skills-container p {
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+.skills-container h2 {
+  justify-content: center;
+  margin: auto;
+  color: white;
+  height: auto;
+  width: fit-content;
+  background-color: #1bef57;
   border-radius: 15px;
+}
 
- }
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
 
- #contact h2 {
+.skill img {
+  width: 70%;
+  max-width: 80px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill h4 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+.skill:hover {
+  transform: translateY(-10px); /* Lift effect */
+}
+
+.skill:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Box-shadow effect */
+}
+
+/******************************* Project Section **************************************/
+.project-card {
+  background-color: black;
+  color: white;
+}
+
+.project-card #pro_p {
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+.project-card #pro_h2 {
+  justify-content: center;
+  margin: auto;
+  color: white;
+  height: auto;
+  width: fit-content;
+  background-color: #1bef57;
+  border-radius: 15px;
+}
+.project-card span {
+  width: fit-content;
+  padding: 5px 9px 5px 9px;
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* *********************** Contact Form ******************************** */
+
+#contact {
+  border-radius: 15px;
+}
+
+#contact h2 {
   font-weight: 800;
- }
+}
 
- #contact label {
+#contact label {
   font-weight: 700;
- }
+}
 
- #contact .star {
-  color: red
- }
+#contact .star {
+  color: red;
+}
 
-
-  /* ********************** Footer *************************** */
+/* ********************** Footer *************************** */
 .footer {
-    background: #34495E;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-  }
+  background: #34495e;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
 
 .footer h3 {
   font-size: 24px;
@@ -417,57 +434,55 @@ body {
   color: white;
 }
 
-  /* ********************** media queries ************************ */
-  @media only screen and (max-width: 600px){
-    .hero {
-      margin-top: 50px;
-      margin-bottom: 10px;
-    }
-  
-    .hero img{
-      margin-top: 40px;
-    }
-    .skill img {
-      width: 40%; /* Even smaller icons on very small screens */
-    }
-  
-    .skill h4 {
-      font-size: 14px; /* Adjust the font size of the title on small screens */
-    }
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .hero {
-      height: 90vh;
-    }
-    .hero img{
-      margin-top: 50px;
-    
-    }
-  
-    #about-img{
-      margin-top: 80px;
-    }
-
-    .skill img {
-      width: 50%; /* Smaller icons on medium devices */
-    }
-  
-    .col-4 {
-      flex: 0 0 33.33%; /* 3 items per row on small devices (mobile and tablet) */
-    }
-    
-    .footer .row {
-      text-align: center;
-    }
-  
-    .footer .col-lg-3 {
-      margin-bottom: 30px;
-    }
-  }
-  @media only screen and (min-width: 124px) {
-    .hero {
-      height: 100vh;
-    }
+/* ********************** media queries ************************ */
+@media only screen and (max-width: 600px) {
+  .hero {
+    margin-top: 50px;
+    margin-bottom: 10px;
   }
 
+  .hero img {
+    margin-top: 40px;
+  }
+  .skill img {
+    width: 40%; /* Even smaller icons on very small screens */
+  }
+
+  .skill h4 {
+    font-size: 14px; /* Adjust the font size of the title on small screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: 90vh;
+  }
+  .hero img {
+    margin-top: 50px;
+  }
+
+  #about-img {
+    margin-top: 80px;
+  }
+
+  .skill img {
+    width: 50%; /* Smaller icons on medium devices */
+  }
+
+  .col-4 {
+    flex: 0 0 33.33%; /* 3 items per row on small devices (mobile and tablet) */
+  }
+
+  .footer .row {
+    text-align: center;
+  }
+
+  .footer .col-lg-3 {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 124px) {
+  .hero {
+    height: 100vh;
+  }
+}
