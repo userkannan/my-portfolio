@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab Programs</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,Arial,sans-serif;background:#f4f6fb;color:#1f2937}
+  .wrap{max-width:760px;margin:0 auto;padding:24px 16px}
+  h1{text-align:center;margin:0 0 20px}
+  .tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+  .tabs button{padding:12px 28px;font-size:18px;font-weight:600;border:2px solid #2563eb;background:#fff;color:#2563eb;border-radius:10px;cursor:pointer}
+  .tabs button.active{background:#2563eb;color:#fff}
+  .item{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;padding:12px 16px;margin-bottom:10px;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+  .item span{font-size:16px}
+  .item a{background:#16a34a;color:#fff;text-decoration:none;padding:8px 16px;border-radius:8px;font-weight:600;white-space:nowrap}
+  .item a:hover{background:#15803d}
+  .hint{text-align:center;color:#6b7280}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Lab Programs</h1>
+  <div class="tabs">
+    <button data-s="AJP">AJP</button>
+    <button data-s="AML">AML</button>
+    <button data-s="WEB">WEB</button>
+  </div>
+  <div id="list"><p class="hint">Click a subject to see its 10 programs.</p></div>
+</div>
+
+<script>
+/* ====== EDIT HERE ======
+   Change the program names (titles) as you like.
+   PDF files must be placed in the "pdfs" folder with the same file names. */
+const programs = {
+  AJP: [
+    "Program 1","Program 2","Program 3","Program 4","Program 5",
+    "Program 6","Program 7","Program 8","Program 9","Program 10"
+  ],
+  AML: [
+    "Program 1","Program 2","Program 3","Program 4","Program 5",
+    "Program 6","Program 7","Program 8","Program 9","Program 10"
+  ],
+  WEB: [
+    "Program 1","Program 2","Program 3","Program 4","Program 5",
+    "Program 6","Program 7","Program 8","Program 9","Program 10"
+  ]
+};
+/* PDF file name pattern: pdfs/AJP1.pdf ... pdfs/AJP10.pdf, pdfs/AML1.pdf ..., pdfs/WEB1.pdf ... */
+
+const list = document.getElementById("list");
+const buttons = document.querySelectorAll(".tabs button");
+
+buttons.forEach(btn => btn.addEventListener("click", () => {
+  const s = btn.dataset.s;
+  buttons.forEach(b => b.classList.toggle("active", b === btn));
+  list.innerHTML = "";
+  programs[s].forEach((title, i) => {
+    const n = i + 1;
+    const file = `pdfs/${s}${n}.pdf`;
+    const row = document.createElement("div");
+    row.className = "item";
+    row.innerHTML = `<span>${n}. ${s} - ${title}</span>
+      <a href="${file}" download="${s}_Program${n}.pdf">Download</a>`;
+    list.appendChild(row);
+  });
+}));
+</script>
+</body>
+</html>
